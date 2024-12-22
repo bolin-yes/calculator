@@ -1,0 +1,6 @@
+calculator: main.o Stack.o
+	gcc -g main.o Stack.o -o calculator
+main.o:main.c Stack.h common.h
+	gcc -c -g  main.c
+Stack.o:Stack.c common.h
+	gcc -c -g Stack.c

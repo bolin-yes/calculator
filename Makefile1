@@ -1,0 +1,8 @@
+calculator: main.o LinkedStack.o List.o
+	gcc -g main.o LinkedStack.o  List.o -o calculator
+main.o:main.c LinkedStack.h common.h
+	gcc -c -g  main.c
+LinkedStack.o:LinkedStack.c common.h List.h
+	gcc -c -g LinkedStack.c
+List.o: List.c
+	gcc -c -g List.c

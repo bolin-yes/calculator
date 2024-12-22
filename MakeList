@@ -1,0 +1,6 @@
+ListTest:ListTest.o List.o
+	gcc -g ListTest.o List.o -o ListTest
+ListTest.o:ListTest.c  List.h
+	gcc -g -c ListTest.c -o  ListTest.o
+List.o:List.c 
+	gcc -g -c List.c -o List.o
